@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author Palacios
  */
-public class GuiaRemision extends ComprobanteElectronico {
+public class GuiaRemision extends ComprobanteElectronico implements IComprobantes {
     private String destino;
     private String placaVehiculo;
     private List<String> listaProductos;
@@ -50,8 +50,14 @@ public class GuiaRemision extends ComprobanteElectronico {
     public void setListaProductos(List<String> listaProductos) {
         this.listaProductos = listaProductos;
     }
-    
-    
+
+    @Override
+    public String getComprobante() {
+        return "Soy un comprobante tipo guia de remision";
+    }
+
+ 
+  
     
     
     

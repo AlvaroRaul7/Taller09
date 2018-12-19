@@ -11,7 +11,7 @@ import java.time.LocalDate;
  *
  * @author Palacios
  */
-public class NotaCredito extends ComprobanteElectronico{
+public class NotaCredito extends ComprobanteElectronico implements IComprobantes{
     private String detalleModificacion;
     private double valorAPagar;
 
@@ -39,6 +39,14 @@ public class NotaCredito extends ComprobanteElectronico{
     public void setValorAPagar(double valorAPagar) {
         this.valorAPagar = valorAPagar;
     }
+
+    @Override
+    public String getComprobante() {
+      return "Soy un comprobante tipo Nota de Creadito";
+    }
+
+  
+   
     
     
     

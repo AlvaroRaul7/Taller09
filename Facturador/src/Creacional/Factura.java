@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author Palacios
  */
-public class Factura extends ComprobanteElectronico{
+public class Factura extends ComprobanteElectronico implements IComprobantes{
     
     private List<String> productos;
     private double total;
@@ -42,8 +42,12 @@ public class Factura extends ComprobanteElectronico{
         this.total = total;
     }
 
-    
-    
-    
+    @Override
+    public String getComprobante() {
+       return "Soy un comprobante tipo factura";
+    }
+
+  
+  
     
 }

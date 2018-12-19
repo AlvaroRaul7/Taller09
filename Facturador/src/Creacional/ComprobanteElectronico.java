@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Creacional;
 
 import java.time.LocalDate;
@@ -13,17 +8,17 @@ import java.util.List;
  *
  * @author Palacios
  */
-public class ComprobanteElectronico {
+public class ComprobanteElectronico  {
     
     protected List<String> detallesEmisor;
-    protected String nombreCliente;
+    protected String nombreCliente ;
     protected long codigo;
     protected LocalDate fecha;
     protected String numeroAutorizacion;
     protected String claveAcceso;
 
-    public ComprobanteElectronico(String nombreCliente, long codigo, LocalDate fecha) {
-        this.nombreCliente = nombreCliente;
+    public ComprobanteElectronico(String cliente, long codigo, LocalDate fecha) {
+        this.nombreCliente = cliente;
         this.codigo = codigo;
         this.fecha = fecha;
         this.detallesEmisor = new LinkedList<>();
@@ -41,13 +36,6 @@ public class ComprobanteElectronico {
         this.detallesEmisor = detallesEmisor;
     }
 
-    public String getNombreCliente() {
-        return nombreCliente;
-    }
-
-    public void setNombreCliente(String nombreCliente) {
-        this.nombreCliente = nombreCliente;
-    }
 
     public long getCodigo() {
         return codigo;
@@ -79,6 +67,11 @@ public class ComprobanteElectronico {
 
     public void setClaveAcceso(String claveAcceso) {
         this.claveAcceso = claveAcceso;
+    }
+
+    @Override
+    public String toString() {
+        return "ComprobanteElectronico{" + "detallesEmisor=" + detallesEmisor + ", cliente=" + nombreCliente + ", codigo=" + codigo + ", fecha=" + fecha + ", numeroAutorizacion=" + numeroAutorizacion + ", claveAcceso=" + claveAcceso + '}';
     }
 
     

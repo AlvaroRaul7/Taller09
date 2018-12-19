@@ -9,9 +9,9 @@ package Creacional;
  *
  * @author Palacios
  */
-public class ComprobantesFactory {
+public class ComprobantesFactory  {
     
-    public ComprobanteElectronico getComprobante(String tipoComprobante){
+    public IComprobantes getComprobante(String tipoComprobante){
       if(tipoComprobante == null){
          return null;
       }		
