@@ -51,6 +51,7 @@ public class GuiaRemision extends ComprobanteElectronico implements IComprobante
         this.listaProductos = listaProductos;
     }
 
+
     @Override
     public String getComprobante() {
         return "Soy un comprobante tipo guia de remision";
@@ -58,6 +59,21 @@ public class GuiaRemision extends ComprobanteElectronico implements IComprobante
 
  
   
+
+    @Override
+    public String toString() {
+    	StringBuilder sb=new StringBuilder();
+    	sb.append("\tGUIA REMISION\n");
+    	sb.append(super.toString()+"\n");
+    	sb.append("Vehiculo: "+placaVehiculo+"\n");
+    	sb.append("Destino: "+destino+"\n");
+    	
+    	
+    	return sb.toString();
+    }   
+
+    
+
     
     
     

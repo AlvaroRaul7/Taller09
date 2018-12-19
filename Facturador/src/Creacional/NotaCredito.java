@@ -49,6 +49,16 @@ public class NotaCredito extends ComprobanteElectronico implements IComprobantes
    
     
     
+    @Override
+    public String toString() {
+    	StringBuilder sb=new StringBuilder();
+    	sb.append("\tNOTA CREDITO\n");
+    	sb.append(super.toString()+"\n");
+    	sb.append("Detalle: "+detalleModificacion+"\n");
+    	sb.append("Valor: "+valorAPagar+"\n");
+    	
+    	return sb.toString();
+    }
     
     
     

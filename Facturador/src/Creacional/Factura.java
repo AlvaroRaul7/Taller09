@@ -43,11 +43,26 @@ public class Factura extends ComprobanteElectronico implements IComprobantes{
     }
 
     @Override
+
     public String getComprobante() {
        return "Soy un comprobante tipo factura";
     }
 
   
   
+
+    public String toString() {
+    	StringBuilder sb=new StringBuilder();
+    	sb.append("\tFACTURA\n");
+    	sb.append(super.toString()+"\n");
+    	sb.append("Items\n");
+    	
+    	sb.append("Total:"+total+"\n");
+    	
+    	return sb.toString();
+    }
+    
+    
+
     
 }

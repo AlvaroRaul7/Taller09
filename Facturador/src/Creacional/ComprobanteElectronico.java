@@ -71,7 +71,18 @@ public class ComprobanteElectronico  {
 
     @Override
     public String toString() {
-        return "ComprobanteElectronico{" + "detallesEmisor=" + detallesEmisor + ", cliente=" + nombreCliente + ", codigo=" + codigo + ", fecha=" + fecha + ", numeroAutorizacion=" + numeroAutorizacion + ", claveAcceso=" + claveAcceso + '}';
+
+ 
+
+    	StringBuilder sb=new StringBuilder();
+    	
+        detallesEmisor.forEach((det) -> {
+            sb.append(det).append("\n");
+        });
+    	sb.append("Cliente: ").append(nombreCliente).append("\n");
+    	sb.append("Fecha: ").append(fecha).append("\n");
+    	
+    	return sb.toString();
     }
 
     
