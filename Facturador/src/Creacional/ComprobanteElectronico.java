@@ -81,6 +81,18 @@ public class ComprobanteElectronico {
         this.claveAcceso = claveAcceso;
     }
 
+    @Override
+    public String toString() {
+    	StringBuilder sb=new StringBuilder();
+    	
+    	for(String det:detallesEmisor) {
+    		sb.append(det+"\n");
+    	}
+    	sb.append("Cliente: "+nombreCliente+"\n");
+    	sb.append("Fecha: "+fecha+"\n");
+    	
+    	return sb.toString();
+    }
     
     
     

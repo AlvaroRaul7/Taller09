@@ -26,4 +26,9 @@ public class LogoDecorator extends DetalleDecorator {
      public List<String> getDetalleEmisor(){
         return this.comprobante.getDetallesEmisor();
     }
+     
+     @Override
+	public String toString() {
+		return "[Logo personalzado]\n"+comprobante.toString();
+	}
 }

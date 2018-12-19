@@ -42,7 +42,17 @@ public class Factura extends ComprobanteElectronico{
         this.total = total;
     }
 
-    
+    @Override
+    public String toString() {
+    	StringBuilder sb=new StringBuilder();
+    	sb.append("\tFACTURA\n");
+    	sb.append(super.toString()+"\n");
+    	sb.append("Items\n");
+    	
+    	sb.append("Total:"+total+"\n");
+    	
+    	return sb.toString();
+    }
     
     
     

@@ -50,7 +50,18 @@ public class GuiaRemision extends ComprobanteElectronico {
     public void setListaProductos(List<String> listaProductos) {
         this.listaProductos = listaProductos;
     }
-    
+    @Override
+    public String toString() {
+    	StringBuilder sb=new StringBuilder();
+    	sb.append("\tGUIA REMISION\n");
+    	sb.append(super.toString()+"\n");
+    	sb.append("Vehiculo: "+placaVehiculo+"\n");
+    	sb.append("Destino: "+destino+"\n");
+    	
+    	
+    	return sb.toString();
+    }   
+
     
     
     
