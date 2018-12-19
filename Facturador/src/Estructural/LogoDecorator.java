@@ -5,10 +5,25 @@
  */
 package Estructural;
 
+import Creacional.ComprobanteElectronico;
+import java.util.List;
+
 /**
  *
  * @author carlasanchez
  */
-public class LogoDecorator {
+public class LogoDecorator extends DetalleDecorator {
+   
+    private ComprobanteElectronico comprobante;
     
+    public LogoDecorator(ComprobanteElectronico comprobante) {
+        super(comprobante);
+    }
+
+    public LogoDecorator() {
+    }
+    
+     public List<String> getDetalleEmisor(){
+        return this.comprobante.getDetallesEmisor();
+    }
 }

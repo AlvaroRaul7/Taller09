@@ -5,10 +5,17 @@
  */
 package Comportamentales;
 
+import Creacional.ComprobanteElectronico;
+
 /**
  *
  * @author alvaro-pc
  */
-public class EsquemaOnline {
+public class EsquemaOnline implements Esquema {
+
+    @Override
+    public void autorizar(ComprobanteElectronico comprobante) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

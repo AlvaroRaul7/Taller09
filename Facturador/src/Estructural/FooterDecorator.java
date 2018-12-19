@@ -5,10 +5,26 @@
  */
 package Estructural;
 
+import Creacional.ComprobanteElectronico;
+import java.util.List;
+
 /**
  *
  * @author carlasanchez
  */
-public class FooterDecorator {
+public class FooterDecorator extends DetalleDecorator {
+    
+    private ComprobanteElectronico comprobante;
+
+    public FooterDecorator(ComprobanteElectronico comprobante) {
+        super(comprobante);
+    }
+
+    public FooterDecorator() {
+    }
+    
+     public List<String> getDetalleEmisor(){
+        return this.comprobante.getDetallesEmisor();
+    }
     
 }
