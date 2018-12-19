@@ -14,6 +14,7 @@ import java.util.List;
 import Creacional.*;
 import Estructural.*;
 import Comportamentales.*;
+import java.util.Scanner;
 
 public class Main {
 
@@ -40,17 +41,38 @@ public class Main {
             gremision.setDestino("Quito");
             gremision.setPlacaVehiculo("GRE-2345");
 	    
-	    System.out.println(factura.toString());
-	    System.out.println("*************");
-	    System.out.println(ncEncabezado.toString());
-	    System.out.println("*************");
+	   System.out.println(factura.toString());
+	    System.out.println("\t*************");
+            System.out.println(ncredito.toString());
+	    System.out.println("\t*************");
             System.out.println(gremision.toString());
-            System.out.println("*************");
+            System.out.println("\t*************");
+            
+        AutorizadorSRI autorizador = new AutorizadorSRI();
+        Scanner sc = new Scanner(System.in);
 
+        System.out.print("Esquema de facturación: \n");
+        System.out.print("1. Online\n2. Offline\n");
+        int opc3 = sc.nextInt();
+        if(opc3==1){
+                autorizador.setEsquema(new EsquemaOnline());
+                autorizador.autorizar(factura);
+        }else{
+                autorizador.setEsquema(new EsquemaOffline());
+                autorizador.autorizar(factura);
+               
+
+        }
+        System.out.println(factura.toString());
         
                 
                 
         }
+
+        
+                
+                
+        
 
 }
 

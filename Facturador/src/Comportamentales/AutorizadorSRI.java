@@ -13,15 +13,18 @@ import Creacional.ComprobanteElectronico;
  */
 public class AutorizadorSRI {
     
-    private final Esquema esquema_de_autorizacion;
+    private Esquema esquema_de_autorizacion;
 
  
     public AutorizadorSRI(Esquema esquema_de_autorizacion) {
         this.esquema_de_autorizacion = esquema_de_autorizacion;
     }
+       public AutorizadorSRI(){}
     
     public void autorizar(ComprobanteElectronico comprobante){
         esquema_de_autorizacion.autorizar(comprobante);
     }
-    
+    public void setEsquema(Esquema esquema){
+        this.esquema_de_autorizacion = esquema;
+    };
 }

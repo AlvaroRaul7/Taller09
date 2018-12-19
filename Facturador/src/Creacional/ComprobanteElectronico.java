@@ -69,6 +69,10 @@ public class ComprobanteElectronico  {
         this.claveAcceso = claveAcceso;
     }
 
+    public void setNombreCliente(String nombreCliente) {
+        this.nombreCliente = nombreCliente;
+    }
+
     @Override
     public String toString() {
 
@@ -76,12 +80,11 @@ public class ComprobanteElectronico  {
 
     	StringBuilder sb=new StringBuilder();
     	
-        detallesEmisor.forEach((det) -> {
-            sb.append(det).append("\n");
-        });
+        
     	sb.append("Cliente: ").append(nombreCliente).append("\n");
     	sb.append("Fecha: ").append(fecha).append("\n");
-    	
+    	sb.append("No autorización: "+ numeroAutorizacion+"\n");
+        sb.append("Clave acceso: "+ claveAcceso + "\n");
     	return sb.toString();
     }
 

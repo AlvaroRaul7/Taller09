@@ -15,7 +15,6 @@ public class EsquemaOnline implements Esquema {
 
     @Override
     public void autorizar(ComprobanteElectronico comprobante) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        comprobante.setNumeroAutorizacion(String.valueOf((int) (Math.random() * 1000)));    }
     
 }
