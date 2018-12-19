@@ -5,12 +5,10 @@
  */
 package Comportamentales;
 
-import Creacional.ComprobanteElectronico;
-
 /**
  *
- * @author Palacios
+ * @author alvaro-pc
  */
-public interface Esquema {
-    public void autorizar(ComprobanteElectronico comprobante);
+public class EsquemaOnline {
+    
 }
